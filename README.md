@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
 
-This is my Numerai pipeline. Numerai is basically a hedge fund that crowdsources ML predictions on obfuscated stock data — you download a dataset of anonymized features, predict targets, submit weekly, and get scored against other models worldwide. I've been competing for a while and this repo is where I keep all the actual research.
+I've been competing for a while and this repo is where I keep all the actual research.
 
 Stack: XGBoost + LightGBM stacked ensemble, era-aware cross-validation, feature neutralization. Still tweaking it.
 
@@ -46,7 +46,7 @@ equity-predictor/
 | LightGBM | `lightgbm` | `n_estimators=500`, `num_leaves=31`, `lr=0.01`, `feature_fraction=0.8` |
 | Ridge Meta-Learner | `scikit-learn` | `alpha=1.0`, inputs = OOF from XGB + LGBM |
 
-Competitive Numerai submissions target validation Spearman correlation of ~0.025–0.045 with Sharpe > 1.0.
+Competitive target validation Spearman correlation of ~0.025–0.045 with Sharpe > 1.0.
 
 ## Install
 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Download Numerai data:
+Download data:
 
 ```python
 import numerapi
